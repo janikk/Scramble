@@ -38,6 +38,6 @@ public class SubLevel : MonoBehaviour {
     
     public bool canMove()
     {
-        return Camera.main.transform.position.x == transform.position.x && Camera.main.transform.position.y == transform.position.y;
+        return !(Mathf.Approximately(Camera.main.transform.position.x, transform.position.x) && Mathf.Approximately(Camera.main.transform.position.y, transform.position.y));
     }
 }
