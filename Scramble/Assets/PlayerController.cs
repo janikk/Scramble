@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     
     [SerializeField] private string axisUD;
     [SerializeField] private string axisLR;
+    [SerializeField] private LayerMask layerMask;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,20 @@ public class PlayerController : MonoBehaviour {
 			move = true;
 		}
 		if (move) {
-			transform.Translate (movespeed * lr * Time.deltaTime * Time.deltaTime, movespeed * ud * Time.deltaTime * Time.deltaTime, 0);
+            Vector3 test = new Vector3(movespeed * lr * Time.deltaTime * Time.deltaTime, movespeed * ud * Time.deltaTime * Time.deltaTime, 0);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, test.normalized, test.magnitude, layerMask);
+            foreach(RaycastHit2D r in hits)
+            {
+                if(r.collider.gameObject.tag == "wall");
+                {
+                    move = false;
+                    break;
+                }
+            }
+            if(move)
+            {
+                transform.Translate(test);
+            }
 		}
 	}
 }
