@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	int ud = 0;
 	int lr = 0;
 	public float movespeed;
+	bool move = true;
 
 	// Use this for initialization
 	void Start () {
@@ -17,9 +18,14 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		lr = (int)Input.GetAxisRaw ("Horizontal");
 		ud = (int)Input.GetAxisRaw ("Vertical");		
-		if (Input.GetKeyDown ("space")) {
-			
+		if (Input.GetKeyDown ("m") && move) {
+			move = false;
 		}
-		transform.Translate (movespeed * lr * Time.deltaTime * Time.deltaTime, movespeed * ud * Time.deltaTime * Time.deltaTime, 0);
+		if (Input.GetKeyDown ("m") && !move) {
+			move = true;
+		}
+		if (move) {
+			transform.Translate (movespeed * lr * Time.deltaTime * Time.deltaTime, movespeed * ud * Time.deltaTime * Time.deltaTime, 0);
+		}
 	}
 }
