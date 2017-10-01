@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour {
 		if (lr != 0 || ud != 0) {
 			move = true;
 		}
+		else
+        {
+            move = false;
+        }
 		if (lr != 0 && ud != 0) {
 			boxSize *= Mathf.Sqrt (2.0f);
 		}
@@ -44,12 +48,12 @@ public class PlayerController : MonoBehaviour {
                 if(r.collider.gameObject.tag == "wall")
                 {
                     move = false;
-                    break;
                     if(!(source.clip == stopSound && source.isPlaying))
                     {
                         source.clip = stopSound;
                         source.Play();
                     }
+                    break;
                 }
             }
             if(move)

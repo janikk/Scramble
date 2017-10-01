@@ -5,17 +5,16 @@ using UnityEngine;
 public class MapActivator : MonoBehaviour {
     
     [SerializeField] private GameObject destructed;
-    [SerializeField] private GameObject instantiated;
     [SerializeField] private GameObject activated;
+    [SerializeField] private GameObject activated2;
     
 	void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "player")
         {
-            activated.SetActive(true);
-            Transform t = destructed.transform;
+            if(activated != null)activated.SetActive(true);
+            if(activated2 != null)activated2.SetActive(true);
             Destroy(destructed);
-            Instantiate(instantiated, t.position, t.rotation);
             Destroy(gameObject);
         }
     }

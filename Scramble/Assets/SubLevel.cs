@@ -18,7 +18,7 @@ public class SubLevel : MonoBehaviour {
         player = GameObject.FindWithTag("player");
         foreach(Transform t in transform)
         {
-            t.gameObject.SetActive(false);
+            if(t.gameObject.tag == "ememy")t.gameObject.SetActive(false);
         }
     }
 	
@@ -36,7 +36,7 @@ public class SubLevel : MonoBehaviour {
             col.gameObject.transform.parent = transform;
             foreach(Transform t in transform)
             {
-                t.gameObject.SetActive(true);
+                if(t.gameObject.tag == "ememy")t.gameObject.SetActive(true);
             }
         }
     }
@@ -51,7 +51,7 @@ public class SubLevel : MonoBehaviour {
         {
             foreach(Transform t in transform)
             {
-                t.gameObject.SetActive(false);
+                if(t.gameObject.tag == "ememy")t.gameObject.SetActive(false);
             }
         }
     }
