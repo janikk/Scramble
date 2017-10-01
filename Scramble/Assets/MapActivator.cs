@@ -8,12 +8,17 @@ public class MapActivator : MonoBehaviour {
     [SerializeField] private GameObject activated;
     [SerializeField] private GameObject activated2;
     
+    AudioSource source;
+    
 	void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "player")
         {
             if(activated != null)activated.SetActive(true);
-            if(activated2 != null)activated2.SetActive(true);
+            if(activated2 != null)
+            {
+                activated2.GetComponent<SlidePuzzle>().enabled = true;
+            }
             Destroy(destructed);
             Destroy(gameObject);
         }
