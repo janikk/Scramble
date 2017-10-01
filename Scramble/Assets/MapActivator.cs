@@ -18,6 +18,11 @@ public class MapActivator : MonoBehaviour {
             if(activated2 != null)
             {
                 activated2.GetComponent<SlidePuzzle>().enabled = true;
+                SpriteRenderer sr= activated2.GetComponent<SpriteRenderer>();
+                if(sr != null)
+                {
+                    sr.color = Color.black;
+                }
             }
             Destroy(destructed);
             Destroy(gameObject);

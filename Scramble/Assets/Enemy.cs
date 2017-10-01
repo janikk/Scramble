@@ -21,6 +21,9 @@ public class Enemy : MonoBehaviour
 	void Start()
     {
 		toStep = stepTime;
+        lastPos = transform.position;
+        nextPos = lastPos;
+        toStep = 0;
 	}
 	
 	void Awake()

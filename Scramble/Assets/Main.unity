@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 575289}
   - component: {fileID: 575288}
   - component: {fileID: 575290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenRoof (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,9 +1081,9 @@ GameObject:
   - component: {fileID: 19289087}
   - component: {fileID: 19289088}
   - component: {fileID: 19289089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (56)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1883,7 +1883,7 @@ Transform:
   - {fileID: 1467410992}
   - {fileID: 1470654297}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &27587785
 SpriteRenderer:
@@ -2732,6 +2732,60 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &41775264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 41775266}
+  - component: {fileID: 41775265}
+  m_Layer: 9
+  m_Name: OuterWall
+  m_TagString: wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &41775265
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 41775264}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &41775266
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 41775264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: -23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41899189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,9 +3151,9 @@ GameObject:
   - component: {fileID: 54995183}
   - component: {fileID: 54995184}
   - component: {fileID: 54995185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PurpleRoof (76)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7271,9 +7325,9 @@ GameObject:
   - component: {fileID: 161291738}
   - component: {fileID: 161291739}
   - component: {fileID: 161291740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (32)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7510,9 +7564,9 @@ GameObject:
   - component: {fileID: 167266090}
   - component: {fileID: 167266091}
   - component: {fileID: 167266092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (35)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9784,9 +9838,9 @@ GameObject:
   - component: {fileID: 241380926}
   - component: {fileID: 241380927}
   - component: {fileID: 241380928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (69)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12897,7 +12951,7 @@ Transform:
   - {fileID: 2082297463}
   - {fileID: 1797343162}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &317639686
 SpriteRenderer:
@@ -15399,6 +15453,8 @@ MonoBehaviour:
   axisD: SlideDown
   axisL: SlideLeft
   axisR: SlideRight
+  move: {fileID: 0}
+  cantMove: {fileID: 0}
 --- !u!4 &392940133
 Transform:
   m_ObjectHideFlags: 0
@@ -15410,7 +15466,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393036357
 GameObject:
@@ -16120,9 +16176,9 @@ GameObject:
   - component: {fileID: 404556493}
   - component: {fileID: 404556494}
   - component: {fileID: 404556495}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (28)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16785,9 +16841,9 @@ GameObject:
   - component: {fileID: 422000265}
   - component: {fileID: 422000266}
   - component: {fileID: 422000267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (27)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17193,7 +17249,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431096755
 GameObject:
@@ -19842,7 +19898,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497405054
 GameObject:
@@ -22391,7 +22447,7 @@ Transform:
   - {fileID: 109966812}
   - {fileID: 847712973}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &547784957
 SpriteRenderer:
@@ -22578,9 +22634,9 @@ GameObject:
   - component: {fileID: 549768757}
   - component: {fileID: 549768758}
   - component: {fileID: 549768759}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (73)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27026,77 +27082,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &658967021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 658967023}
-  - component: {fileID: 658967022}
-  m_Layer: 9
-  m_Name: Enemy
-  m_TagString: enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &658967022
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 658967021}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
---- !u!4 &658967023
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 658967021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4827294, y: 4.193836, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659379330
 GameObject:
   m_ObjectHideFlags: 0
@@ -28417,7 +28402,7 @@ Transform:
   - {fileID: 1558078253}
   - {fileID: 1063121375}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &689800540
 SpriteRenderer:
@@ -29673,6 +29658,60 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &726426360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 726426362}
+  - component: {fileID: 726426361}
+  m_Layer: 9
+  m_Name: OuterWall (1)
+  m_TagString: wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &726426361
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726426360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 45}
+  m_EdgeRadius: 0
+--- !u!4 &726426362
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726426360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727182612
 GameObject:
   m_ObjectHideFlags: 0
@@ -33010,9 +33049,9 @@ GameObject:
   - component: {fileID: 816725089}
   - component: {fileID: 816725090}
   - component: {fileID: 816725091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PurpleRoof (71)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36901,7 +36940,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &893426070
 GameObject:
@@ -37894,9 +37933,11 @@ GameObject:
   m_Component:
   - component: {fileID: 910340254}
   - component: {fileID: 910340253}
-  m_Layer: 0
+  - component: {fileID: 910340255}
+  - component: {fileID: 910340256}
+  m_Layer: 9
   m_Name: SlideController
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37919,6 +37960,8 @@ MonoBehaviour:
   axisD: SlideDown
   axisL: SlideLeft
   axisR: SlideRight
+  move: {fileID: 8300000, guid: 4aff6c3d5ac9eb94fb68e08c7ac077cb, type: 3}
+  cantMove: {fileID: 8300000, guid: 66e332073182c6e47b18638011f22d07, type: 3}
 --- !u!4 &910340254
 Transform:
   m_ObjectHideFlags: 0
@@ -37930,8 +37973,113 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &910340255
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910340252}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15, y: 15}
+  m_EdgeRadius: 0
+--- !u!82 &910340256
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910340252}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &912639174
 GameObject:
   m_ObjectHideFlags: 0
@@ -41923,7 +42071,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986106688
 GameObject:
@@ -43795,9 +43943,9 @@ GameObject:
   - component: {fileID: 1041580184}
   - component: {fileID: 1041580185}
   - component: {fileID: 1041580186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (59)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44060,9 +44208,9 @@ GameObject:
   - component: {fileID: 1048611643}
   - component: {fileID: 1048611644}
   - component: {fileID: 1048611645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (69)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44232,7 +44380,7 @@ Transform:
   - {fileID: 480119270}
   - {fileID: 1811381522}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1049138759
 SpriteRenderer:
@@ -45013,9 +45161,9 @@ GameObject:
   - component: {fileID: 1066789771}
   - component: {fileID: 1066789772}
   - component: {fileID: 1066789773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (75)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49206,9 +49354,9 @@ GameObject:
   - component: {fileID: 1177137345}
   - component: {fileID: 1177137344}
   - component: {fileID: 1177137343}
-  - component: {fileID: 1177137346}
   - component: {fileID: 1177137347}
   - component: {fileID: 1177137348}
+  - component: {fileID: 1177137346}
   m_Layer: 9
   m_Name: Player
   m_TagString: player
@@ -49267,7 +49415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 04e02804b31355e498d00267de23aad1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -49284,14 +49432,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177137342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.63, y: -0.39, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1177137346
-CircleCollider2D:
+--- !u!61 &1177137346
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -49303,8 +49451,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.08
+  m_Size: {x: 0.58, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!50 &1177137347
 Rigidbody2D:
   serializedVersion: 4
@@ -52316,9 +52474,9 @@ GameObject:
   - component: {fileID: 1226272094}
   - component: {fileID: 1226272095}
   - component: {fileID: 1226272096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PurpleRoof (73)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53660,9 +53818,9 @@ GameObject:
   - component: {fileID: 1257832663}
   - component: {fileID: 1257832664}
   - component: {fileID: 1257832665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (68)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53757,9 +53915,9 @@ GameObject:
   - component: {fileID: 1259879315}
   - component: {fileID: 1259879316}
   - component: {fileID: 1259879317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (77)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54771,7 +54929,7 @@ Transform:
   - {fileID: 909769594}
   - {fileID: 898692440}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1268612944
 SpriteRenderer:
@@ -56780,9 +56938,9 @@ GameObject:
   - component: {fileID: 1309588290}
   - component: {fileID: 1309588291}
   - component: {fileID: 1309588292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (116)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57426,9 +57584,9 @@ GameObject:
   - component: {fileID: 1328479368}
   - component: {fileID: 1328479367}
   - component: {fileID: 1328479369}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenRoof (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58098,9 +58256,9 @@ GameObject:
   - component: {fileID: 1336225370}
   - component: {fileID: 1336225371}
   - component: {fileID: 1336225372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (74)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60120,9 +60278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1372505551}
   - component: {fileID: 1372505552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (79)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60537,7 +60695,7 @@ Transform:
   - {fileID: 1708480635}
   - {fileID: 1339103529}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1377233318
 SpriteRenderer:
@@ -63450,9 +63608,9 @@ GameObject:
   - component: {fileID: 1429924511}
   - component: {fileID: 1429924510}
   - component: {fileID: 1429924512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenRoof (18)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63794,7 +63952,7 @@ Transform:
   - {fileID: 1293549708}
   - {fileID: 902400486}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1432023455
 MonoBehaviour:
@@ -68674,9 +68832,9 @@ GameObject:
   - component: {fileID: 1537053717}
   - component: {fileID: 1537053718}
   - component: {fileID: 1537053719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PurpleRoof (70)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73516,7 +73674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664744191
 GameObject:
@@ -81706,9 +81864,9 @@ GameObject:
   - component: {fileID: 1882252631}
   - component: {fileID: 1882252632}
   - component: {fileID: 1882252633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (107)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83102,9 +83260,9 @@ GameObject:
   - component: {fileID: 1899997806}
   - component: {fileID: 1899997807}
   - component: {fileID: 1899997808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (58)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83993,7 +84151,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -84020,7 +84178,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1920200615
 MonoBehaviour:
@@ -85673,9 +85831,9 @@ GameObject:
   - component: {fileID: 1967930280}
   - component: {fileID: 1967930279}
   - component: {fileID: 1967930281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenRoof (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86637,7 +86795,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987836821
 GameObject:
@@ -87550,6 +87708,60 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &2001451430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2001451432}
+  - component: {fileID: 2001451431}
+  m_Layer: 9
+  m_Name: OuterWall (2)
+  m_TagString: wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2001451431
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001451430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 45}
+  m_EdgeRadius: 0
+--- !u!4 &2001451432
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001451430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004347895
 GameObject:
   m_ObjectHideFlags: 0
@@ -87799,9 +88011,9 @@ GameObject:
   - component: {fileID: 2014711376}
   - component: {fileID: 2014711377}
   - component: {fileID: 2014711378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PinkRoof (78)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88865,7 +89077,7 @@ Transform:
   - {fileID: 1740705666}
   - {fileID: 229227730}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2031054129
 SpriteRenderer:
@@ -90550,9 +90762,9 @@ GameObject:
   - component: {fileID: 2073776556}
   - component: {fileID: 2073776555}
   - component: {fileID: 2073776557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenRoof (19)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90745,7 +90957,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078841301
 GameObject:
@@ -91120,7 +91332,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085515167
 GameObject:
@@ -91301,7 +91513,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2089958688
 GameObject:
@@ -92011,9 +92223,9 @@ GameObject:
   - component: {fileID: 2099956550}
   - component: {fileID: 2099956551}
   - component: {fileID: 2099956552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (62)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92683,9 +92895,9 @@ GameObject:
   - component: {fileID: 2112568395}
   - component: {fileID: 2112568396}
   - component: {fileID: 2112568397}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (57)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93575,9 +93787,9 @@ GameObject:
   - component: {fileID: 2145745650}
   - component: {fileID: 2145745651}
   - component: {fileID: 2145745652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PurpleRoof (77)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93672,9 +93884,9 @@ GameObject:
   - component: {fileID: 2147021547}
   - component: {fileID: 2147021548}
   - component: {fileID: 2147021549}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedRoof (24)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour {
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		lr = (int)Input.GetAxisRaw (axisLR);
 		ud = (int)Input.GetAxisRaw (axisUD);
-		float boxSize = 0.5f;
+		float boxSize = 0.55f;
 		if (lr != 0 || ud != 0) {
 			move = true;
 		}
@@ -71,4 +72,12 @@ public class PlayerController : MonoBehaviour {
             source.Pause();
         }
 	}
+	
+	void OnCollidionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 }

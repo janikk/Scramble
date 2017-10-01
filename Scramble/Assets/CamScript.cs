@@ -9,6 +9,7 @@ public class CamScript : MonoBehaviour {
     private GameObject player;
 	// Use this for initialization
 	void Start () {
+        Screen.SetResolution (960, 960, false);
 		mapped = false;
 	}
 	
@@ -19,6 +20,10 @@ public class CamScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Screen.fullScreen || Camera.main.aspect != 1) 
+         {
+             Screen.SetResolution (960, 960, false);
+         }
 		if(Input.GetButtonDown(mapAxis))
         {
             if(mapped)
