@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour {
 
 	//Animator anim;
@@ -9,14 +10,20 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float movespeed;
 	bool move = true;
     
+    private AudioSource source;
+    
     [SerializeField] private string axisUD;
     [SerializeField] private string axisLR;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private AudioClip stopSound;
+    [SerializeField] private AudioClip moveSound;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		//anim = GetComponent<Animator> ();
+        source = GetComponent<AudioSource>();
 	}
+	
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,12 +45,26 @@ public class PlayerController : MonoBehaviour {
                 {
                     move = false;
                     break;
+                    if(!(source.clip == stopSound && source.isPlaying))
+                    {
+                        source.clip = stopSound;
+                        source.Play();
+                    }
                 }
             }
             if(move)
             {
+                if(!(source.clip == moveSound && source.isPlaying))
+                {
+                    source.clip = moveSound;
+                    source.Play();
+                }
                 transform.Translate(test);
             }
 		}
+		else
+        {
+            source.Pause();
+        }
 	}
 }

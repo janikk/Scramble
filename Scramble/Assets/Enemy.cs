@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float stepTime;
     [SerializeField] private float straightChance;
     [SerializeField] private float stepSize;
     [SerializeField] private int maxHealth;
+    [SerializeField] private AudioClip stepSound;
     
     private float toStep;
     private int health;
     private Vector3 lastPos;
     private Vector3 nextPos;
+    private AudioSource source;
     
 	// Use this for initialization
 	void Start()
@@ -22,7 +25,8 @@ public class Enemy : MonoBehaviour
 	
 	void Awake()
     {
-        
+        source = GetComponent<AudioSource>();
+        source.clip = stepSound;
     }
 	
 	// Update is called once per frame
@@ -48,6 +52,7 @@ public class Enemy : MonoBehaviour
 	
 	void step()
     {
+        source.Play();
         Vector2 vLeft = new Vector2(transform.position.x - transform.right.x, transform.position.y - transform.right.y);
         Vector2 vUp = new Vector2(transform.position.x + transform.up.x, transform.position.y + transform.up.y);
         Vector2 vRight = new Vector2(transform.position.x + transform.right.x, transform.position.y + transform.right.y);
