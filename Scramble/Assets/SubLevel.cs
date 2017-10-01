@@ -31,6 +31,13 @@ public class SubLevel : MonoBehaviour {
         else if(col.gameObject.tag == "player")
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+            col.gameObject.transform.parent = transform;
+            Camera.main.transform.parent = transform;
         }
+    }
+    
+    public bool canMove()
+    {
+        return Camera.main.transform.position.x == transform.position.x && Camera.main.transform.position.y == transform.position.y;
     }
 }
