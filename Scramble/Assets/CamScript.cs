@@ -35,11 +35,13 @@ public class CamScript : MonoBehaviour {
 	void map()
     {
         transform.position = new Vector3(0, 0, transform.position.z + zDisp);
+        mapped = true;
     }
     
     void unMap()
     {
         Vector3 newPos = new Vector3(player.transform.parent.position.x, player.transform.parent.position.y, transform.position.z - zDisp);
         transform.position = newPos;
+        mapped = false;
     }
 }
