@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour {
 	//Animator anim;
 	int ud = 0;
 	int lr = 0;
-	public float movespeed;
+	[SerializeField] private float movespeed;
 	bool move = true;
+    
+    [SerializeField] private string axisUD;
+    [SerializeField] private string axisLR;
 
 	// Use this for initialization
 	void Start () {
@@ -16,8 +19,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		lr = (int)Input.GetAxisRaw ("Horizontal");
-		ud = (int)Input.GetAxisRaw ("Vertical");		
+		lr = (int)Input.GetAxisRaw (axisLR);
+		ud = (int)Input.GetAxisRaw (axisUD);
 		if (Input.GetKeyDown ("m") && move) {
 			move = false;
 		}

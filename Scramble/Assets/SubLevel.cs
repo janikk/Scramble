@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 
 public class SubLevel : MonoBehaviour {
-	// Use this for initialization
+    GameObject player;
+	// Use this for initialization    
 	void Start()
     {
 		
@@ -14,6 +15,7 @@ public class SubLevel : MonoBehaviour {
 	void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
+        player = GameObject.FindWithTag("player");
     }
 	
 	// Update is called once per frame
@@ -32,12 +34,11 @@ public class SubLevel : MonoBehaviour {
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
             col.gameObject.transform.parent = transform;
-            Camera.main.transform.parent = transform;
         }
     }
     
-    public bool canMove()
+    virtual public bool canMove()
     {
-        return !(Mathf.Approximately(Camera.main.transform.position.x, transform.position.x) && Mathf.Approximately(Camera.main.transform.position.y, transform.position.y));
+        return player.transform.parent != transform;
     }
 }
